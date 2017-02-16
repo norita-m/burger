@@ -1,0 +1,29 @@
+body {
+  	background: #00ccff;
+  	font-family: Oswald, Arial;
+  	text-align: center;
+  	text-shadow:2px 2px 5px #878189;
+}
+
+li {
+  background: white;
+  margin: 5px;
+  padding: 5px;
+}
+
+/*.pic-burger {
+}*/
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  margin: 5px;
+  padding: 5px;
+  align-content: center;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
