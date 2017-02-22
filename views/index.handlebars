@@ -1,44 +1,14 @@
 <h1>Eat Dat Burger</h1>
 
-<img src="/assets/img/burger.png" alt="burger" style="width:304px;height:228px;">
-
-<ul>
-  {{#each burgers}}
-    {{#unless this.devoured}}
-      <li>
-        {{this.name}}
-
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
-          <button type="submit">Delete</button>
-        </form>
-
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<ul>
-  {{#each burgers}}
-    {{#if this.devoured}}
-      <li>
-        {{this.name}}
-
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="false">
-          <button type="submit">Devour It!</button>
-        </form>
-
-        {{> burgers/delete-burger}}
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
 
 <form class="create-update-form" action="/" method="POST">
+  
+  <img src="/assets/img/burger.png" alt="burger" style="width:304px;height:228px;">
+
+  <h2>Add a Burger</h2>
 
   <div class="form-group">
-    <input type="text" id="burger-name" name="name">
+    <input type="text" id="burger_name" name="burger_name">
   </div>
 
   <div class="submit-button">
@@ -46,4 +16,37 @@
     <br>
     <p>Enter the burger you want to eat then click "Submit"</p>
    </div> 
+
 </form>
+
+
+<div class="noteaten_burgers">
+  {{#each burger}}
+    {{#unless this.devoured}}
+        {{this.burger_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit">Devour it!</button>
+        </form>
+
+    {{/unless}}
+  {{/each}}
+</div>
+
+<hr>
+
+<div class="eaten_burgers">
+  <h1>Devoured Burgers</h1>
+  {{#each burger}}
+    {{#if this.devoured}}
+        {{this.burger_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+        </form>
+
+    {{/if}}
+  {{/each}}
+</div>
+
+

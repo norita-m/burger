@@ -5,18 +5,17 @@ body {
   	text-shadow:2px 2px 5px #878189;
 }
 
-li {
-  background: white;
-  margin: 5px;
-  padding: 5px;
-}
 
 /*.pic-burger {
 }*/
 
-.label {
-  font-weight: bold;
+.noteaten_burgers {
+	margin-bottom: 20px;
 }
+
+/*.eaten_burgers {
+    padding-left: 600px;
+}*/
 
 .create-update-form {
   margin: 5px;
@@ -26,4 +25,9 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+
+hr {
+	border-color: black;	
+	width: 350px;
 }
